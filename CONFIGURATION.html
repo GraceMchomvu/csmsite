@@ -1,0 +1,288 @@
+<!-- ===== CONFIGURATION GUIDE ===== -->
+<!-- 
+Copy and paste the configurations you need into your project
+-->
+
+<!-- ===== FAVICON ===== -->
+<!-- Add this to the <head> section of index.html -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- ===== SEO META TAGS ===== -->
+<!-- Add these to the <head> section for better SEO -->
+<meta name="description" content="Christ Synagogue Ministries (CSM) - Building faith, community, and hope through the gospel of Jesus Christ. Join us for worship, discipleship, and community service.">
+<meta name="keywords" content="church, ministry, worship, faith, Jesus Christ, Christian, prayer, discipleship">
+<meta name="author" content="Christ Synagogue Ministries">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Christ Synagogue Ministries - CSM Church">
+<meta property="og:description" content="Join us for inspiring worship services and biblical teaching.">
+<meta property="og:image" content="images/church-photo.jpg">
+<meta property="og:url" content="https://csm.church">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===== FORMSPREE INTEGRATION ===== -->
+<!-- 
+To enable email sending for contact forms:
+1. Go to https://formspree.io
+2. Create an account and add your form
+3. Replace form action with your Formspree endpoint
+-->
+<!-- Replace the contact form with this: -->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
+<!-- ===== GOOGLE ANALYTICS ===== -->
+<!-- 
+Add this to the <head> section to track visitor analytics
+Replace YOUR_TRACKING_ID with your actual Google Analytics ID
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_TRACKING_ID');
+</script>
+
+<!-- ===== FACEBOOK PIXEL ===== -->
+<!-- 
+Add this to the <head> section for Facebook tracking
+Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID
+-->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+
+<!-- ===== STRIPE PAYMENT INTEGRATION ===== -->
+<!-- 
+For online giving/donations
+1. Create Stripe account at https://stripe.com
+2. Get your publishable key
+3. Add this script and button
+-->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- ===== MAILCHIMP NEWSLETTER ===== -->
+<!-- 
+For email newsletter subscriptions
+1. Create Mailchimp account at https://mailchimp.com
+2. Get your form action URL
+3. Replace the action URL below
+-->
+<form action="https://mailchimp.us12.list-manage.com/subscribe/post?u=YOUR_U_VALUE&id=YOUR_ID" method="POST">
+    <input type="email" name="EMAIL" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+</form>
+
+<!-- ===== LIVE CHAT INTEGRATION ===== -->
+<!-- 
+Add live chat support with Tidio
+1. Sign up at https://tidio.com
+2. Get your chat code
+3. Add before </body> tag
+-->
+<script src="//code.tidio.co/YOUR_UNIQUE_CODE.js" async></script>
+
+<!-- ===== DONATION BUTTON (PAYPAL) ===== -->
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+    <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!"/>
+    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+<!-- ===== YOUTUBE EMBEDDING ===== -->
+<!-- 
+To embed sermon videos or church channel
+-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- ===== GOOGLE MAPS EMBEDDING ===== -->
+<!-- 
+To embed church location
+1. Get embed code from Google Maps
+2. Add width="100%" and height="400" for responsive design
+-->
+<iframe width="100%" height="400" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed?pb=..."></iframe>
+
+<!-- ===== SOCIAL MEDIA SHARE BUTTONS ===== -->
+<!-- 
+Add share buttons for blog posts and events
+-->
+
+<!-- Facebook Share -->
+<a href="https://www.facebook.com/sharer/sharer.php?u=PAGE_URL" target="_blank">Share on Facebook</a>
+
+<!-- Twitter Share -->
+<a href="https://twitter.com/intent/tweet?text=Check this event&url=PAGE_URL" target="_blank">Share on Twitter</a>
+
+<!-- LinkedIn Share -->
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=PAGE_URL" target="_blank">Share on LinkedIn</a>
+
+<!-- WhatsApp Share -->
+<a href="https://wa.me/?text=Check this: PAGE_URL" target="_blank">Share on WhatsApp</a>
+
+<!-- Email Share -->
+<a href="mailto:?subject=Check this event&body=PAGE_URL">Share via Email</a>
+
+<!-- ===== ROBOTS.TXT ===== -->
+<!-- 
+Create a file named robots.txt in the root directory
+-->
+User-agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://csm.church/sitemap.xml
+
+<!-- ===== SITEMAP.XML ===== -->
+<!-- 
+Create a file named sitemap.xml for search engines
+Basic example:
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://csm.church/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://csm.church/#about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csm.church/#services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csm.church/#events</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csm.church/#contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+
+<!-- ===== .HTACCESS FILE (for Apache servers) ===== -->
+<!-- 
+Create a file named .htaccess in root directory
+Improves SEO, security, and performance
+-->
+# Enable mod_rewrite module
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.html [NC, L]
+</IfModule>
+
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Cache settings
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access 1 month"
+    ExpiresByType text/css "access 1 year"
+    ExpiresByType application/javascript "access 1 year"
+    ExpiresByType image/jpeg "access 1 year"
+    ExpiresByType image/gif "access 1 year"
+    ExpiresByType image/png "access 1 year"
+</IfModule>
+
+<!-- ===== SERVICE WORKER (for PWA) ===== -->
+<!-- 
+Create sw.js file for offline functionality
+Add to <head> of index.html:
+-->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
+</script>
+
+<!-- ===== DARK MODE TOGGLE ===== -->
+<!-- 
+Add to script.js for dark mode support
+-->
+<script>
+const darkModeToggle = document.createElement('button');
+darkModeToggle.textContent = '🌙';
+darkModeToggle.style.position = 'fixed';
+darkModeToggle.style.bottom = '20px';
+darkModeToggle.style.right = '20px';
+darkModeToggle.style.zIndex = '1001';
+darkModeToggle.style.padding = '10px 15px';
+darkModeToggle.style.borderRadius = '50%';
+darkModeToggle.style.border = 'none';
+darkModeToggle.style.cursor = 'pointer';
+
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
+
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+}
+
+document.body.appendChild(darkModeToggle);
+</script>
+
+<!-- ===== CONTACT INFO FOR EMERGENCY ===== -->
+<!-- 
+Keep this updated for prayer requests and pastoral emergencies
+-->
+<div style="display:none;">
+    <p>Pastoral Emergency Line: +1 (555) 123-4567</p>
+    <p>Prayer Request: prayer@csm.church</p>
+    <p>Counseling: counseling@csm.church</p>
+</div>
+
+<!-- ===== VERSION & CHANGELOG ===== -->
+<!-- 
+Track updates to your website
+v1.0.0 - Initial launch
+v1.1.0 - Added giving section
+v1.2.0 - Mobile optimization
+-->

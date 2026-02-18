@@ -1,0 +1,29 @@
+# Christ Synagogue Ministries robots.txt
+# This file helps search engines crawl and index your website
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cache/
+Disallow: /temp/
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
+Sitemap: https://csm.church/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Request rate
+Request-rate: 1/10s

@@ -1,0 +1,58 @@
+
+======================================================================
+  🖼️  CSM CHURCH WEBSITE - IMAGE SETUP GUIDE
+======================================================================
+
+Generated: February 18, 2026 at 04:15 PM
+
+IMAGE REQUIREMENTS:
+
+File: logo.png
+  Description: Church Logo
+  Size: 200x200px
+  Format: PNG
+  Purpose: Navigation bar and footer
+  Source: Use official church logo if available
+
+File: hero-banner.jpg
+  Description: Hero Banner Background
+  Size: 1920x600px
+  Format: JPG
+  Purpose: Large hero section background
+  Source: Unsplash: search 'church worship community'
+
+File: church-main.jpg
+  Description: Church Building/Interior
+  Size: 1200x800px
+  Format: JPG
+  Purpose: About section main image
+  Source: Unsplash: search 'church sanctuary interior'
+
+File: worship-team.jpg
+  Description: Worship Service Photo
+  Size: 800x600px
+  Format: JPG
+  Purpose: Sunday Worship service card
+  Source: Unsplash: search 'modern worship praise'
+
+File: prayer-service.jpg
+  Description: Prayer Service Photo
+  Size: 800x600px
+  Format: JPG
+  Purpose: Prayer event card
+  Source: Unsplash: search 'prayer hands faith'
+
+File: youth-group.jpg
+  Description: Youth Fellowship Photo
+  Size: 800x600px
+  Format: JPG
+  Purpose: Youth group events
+  Source: Unsplash: search 'young people community'
+
+File: community-event.jpg
+  Description: Community Service Photo
+  Size: 800x600px
+  Format: JPG
+  Purpose: Outreach/community events
+  Source: Unsplash: search 'community help service'
+
