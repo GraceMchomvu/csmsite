@@ -94,25 +94,28 @@ if (contactForm) {
     });
 }
 
-// ===== Scroll Animation =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+// ===== Scroll Reveal Animation =====
+const revealObserverOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeIn 0.6s ease forwards';
-            observer.unobserve(entry.target);
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target); // Only animate once
         }
     });
-}, observerOptions);
+}, revealObserverOptions);
 
-// Apply animation to cards on scroll
-document.querySelectorAll('.service-card, .event-card, .info-item, .feature-item').forEach(card => {
-    card.style.opacity = '0';
-    observer.observe(card);
+// Observe all elements with .reveal-on-scroll class
+document.querySelectorAll('.reveal-on-scroll').forEach((el, index) => {
+    // Optional: Add staggered delay if parent has .stagger-children
+    if (el.closest('.stagger-reveal-group')) {
+        el.style.transitionDelay = `${(index % 5) * 0.1}s`;
+    }
+    revealObserver.observe(el);
 });
 
 // ===== Counter Animation =====
@@ -140,7 +143,7 @@ function animateCounters() {
 // Trigger counter animation when scroll to giving section
 const givingSection = document.querySelector('.giving');
 if (givingSection) {
-    const givingObserver = new IntersectionObserver(function(entries) {
+    const givingObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounters();
@@ -148,7 +151,7 @@ if (givingSection) {
             }
         });
     }, { threshold: 0.5 });
-    
+
     givingObserver.observe(givingSection);
 }
 
@@ -170,11 +173,11 @@ if (footerYear) {
 
 // ===== Newsletter Subscription =====
 document.querySelectorAll('.newsletter-input button').forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
         e.preventDefault();
         const emailInput = this.previousElementSibling;
         const email = emailInput.value;
-        
+
         if (email && email.includes('@')) {
             alert('Thank you for subscribing! Check your email for confirmation.');
             emailInput.value = '';
@@ -193,3 +196,56 @@ window.addEventListener('load', () => {
 window.addEventListener('beforeprint', () => {
     document.body.style.backgroundColor = 'white';
 });
+
+// ===== Hero Text Cycling Animation =====
+(function () {
+    const wordElement = document.getElementById('heroForWord');
+    if (!wordElement) return;
+
+    const words = [
+        "Prophecy",
+        "Healing",
+        "Worship",
+        "Answers",
+        "Prayer",
+        "Testimony",
+        "You",
+        "Families",
+        "Nations"
+    ];
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Fade out
+        wordElement.style.opacity = '0';
+        wordElement.style.transform = 'translateY(10px)';
+
+        setTimeout(() => {
+            // Change text
+            currentIndex = (currentIndex + 1) % words.length;
+            wordElement.textContent = words[currentIndex];
+
+            // Fade in
+            wordElement.style.opacity = '1';
+            wordElement.style.transform = 'translateY(0)';
+        }, 300); // Wait for fade out to finish
+
+    }, 2500); // Change every 2.5 seconds
+})();
+
+// ===== Hero Background Slideshow =====
+(function () {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length === 0) return;
+
+    let current = 0;
+    const intervalTime = 6000; // 6 seconds per slide
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, intervalTime);
+})();
+

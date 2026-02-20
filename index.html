@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -36,27 +40,53 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section — Seven Hills Style -->
     <section id="home" class="hero">
-        <div class="hero-bg-animation" aria-hidden="true">
-            <span class="hero-bg-shape hero-bg-shape-1"></span>
-            <span class="hero-bg-shape hero-bg-shape-2"></span>
-            <span class="hero-bg-shape hero-bg-shape-3"></span>
-            <span class="hero-bg-shape hero-bg-shape-4"></span>
-            <span class="hero-bg-shape hero-bg-shape-5"></span>
+
+        <!-- Slideshow Background -->
+        <div class="hero-slides" aria-hidden="true">
+            <div class="hero-slide active" style="background-image: url('churchphotos/IMG_4010.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('churchphotos/IMG_0812.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('churchphotos/IMG_1016.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('churchphotos/IMG_0570.jpg')"></div>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>KARIBU CSM</h1>
-                <p class="hero-description">We are a prophetic ministry in Arusha, Tanzania — led by Prophet Baraka David Ogillo, transforming lives through guidance, deliverance, and Spirit-filled worship.</p>
-                <p class="hero-description">Wherever you are on your spiritual journey, you are welcome here.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-hero-primary">PLAN YOUR VISIT</a>
-                    <a href="#services" class="btn btn-hero-secondary">VIEW SERVICES</a>
-                </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Content -->
+        <div class="hero-inner">
+
+            <!-- Main Headline -->
+            <h1 class="hero-headline">
+                <span class="hero-hl-line hero-hl-1">KARIBU</span>
+                <span class="hero-hl-line hero-hl-2">CSM</span>
+            </h1>
+
+            <!-- Cycling audience row — "A Ministry For: Prophecy" -->
+            <div class="hero-for-row" aria-live="polite">
+                <span class="hero-for-label">A Ministry For</span>
+                <span class="hero-for-divider" aria-hidden="true">:</span>
+                <span class="hero-for-word" id="heroForWord">Prophecy</span>
+            </div>
+
+            <!-- Address -->
+            <p class="hero-address">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Arusha, Tanzania &nbsp;·&nbsp; Sun 10 AM &nbsp;·&nbsp; csm.church
+            </p>
+
+            <!-- Single CTA -->
+            <div class="hero-cta">
+                <a href="#contact" class="btn-sh-primary">Plan Your Visit</a>
+                <a href="#about" class="btn-sh-ghost">Learn More</a>
             </div>
         </div>
+
+        <!-- Scroll cue -->
+        <a href="#about" class="hero-scroll" aria-label="Scroll down">
+            <span class="hero-scroll-mouse"><span class="hero-scroll-wheel"></span></span>
+        </a>
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -64,12 +94,17 @@
             <div class="about-header">
                 <span class="about-label">Who We Are</span>
                 <h2>About Our Church</h2>
-                <p class="about-intro">Christ Synagogue Ministries is led by <strong>Prophet Baraka David Ogillo</strong> in Arusha, Tanzania. We are dedicated to transforming lives through guidance, deliverance, and Spirit-filled worship—spreading the gospel and building a strong, loving community of believers through faith, discipleship, and prophetic ministry.</p>
+                <p class="about-intro">Christ Synagogue Ministries is led by <strong>Prophet Baraka David
+                        Ogillo</strong> in Arusha, Tanzania. We are dedicated to transforming lives through guidance,
+                    deliverance, and Spirit-filled worship—spreading the gospel and building a strong, loving community
+                    of believers through faith, discipleship, and prophetic ministry.</p>
             </div>
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-container">
-                        <img src="churchphotos/PROPHET1.jpg" alt="Prophet Baraka David Ogillo ministering at Christ Synagogue Ministries" class="responsive-image">
+                        <img src="churchphotos/PROPHET1.jpg"
+                            alt="Prophet Baraka David Ogillo ministering at Christ Synagogue Ministries"
+                            class="responsive-image">
                     </div>
                 </div>
                 <div class="about-features">
@@ -111,7 +146,8 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-fire"></i></div>
                     <h3>Prophetic Ministry</h3>
-                    <p>Experience the power of the Holy Spirit through prophetic words, divine guidance, and spiritual impartation.</p>
+                    <p>Experience the power of the Holy Spirit through prophetic words, divine guidance, and spiritual
+                        impartation.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-users"></i></div>
@@ -190,16 +226,21 @@
     <section id="prophet" class="prophet-section">
         <div class="container">
             <h2>Our Prophet</h2>
-            <p class="prophet-intro">Prophet Baraka David Ogillo leads Christ Synagogue Ministries with prophetic insight, deliverance, and Spirit-filled worship in Arusha, Tanzania.</p>
+            <p class="prophet-intro">Prophet Baraka David Ogillo leads Christ Synagogue Ministries with prophetic
+                insight, deliverance, and Spirit-filled worship in Arusha, Tanzania.</p>
             <div class="prophet-grid">
                 <div class="prophet-card">
                     <div class="prophet-image">
-                        <img class="lazy" data-src="churchphotos/PROPHET1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Prophet Photo 1" loading="lazy" decoding="async">
+                        <img class="lazy" data-src="churchphotos/PROPHET1.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Prophet Photo 1" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="prophet-card">
                     <div class="prophet-image">
-                        <img class="lazy" data-src="churchphotos/PROPHET2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Prophet Photo 2" loading="lazy" decoding="async">
+                        <img class="lazy" data-src="churchphotos/PROPHET2.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Prophet Photo 2" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -225,24 +266,42 @@
         <div class="container">
             <h2>Church Photos</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0570.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 0570" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0588.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 0588" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0812.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 0812" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1016.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 1016" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1527.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 1527" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1530.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Church photo - IMG 1530" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0570.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 0570" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0588.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 0588" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0812.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 0812" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1016.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 1016" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1527.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 1527" loading="lazy" decoding="async" fetchpriority="low"></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1530.jpg"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Church photo - IMG 1530" loading="lazy" decoding="async" fetchpriority="low"></a></div>
             </div>
             <div style="text-align:center; margin-top: 28px;">
                 <a href="gallery.html" class="btn btn-primary">View All Photos</a>
             </div>
             <noscript>
                 <div class="gallery-grid" style="margin-top: 28px;">
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0570.jpg" alt="Church photo - IMG 0570"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0588.jpg" alt="Church photo - IMG 0588"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0812.jpg" alt="Church photo - IMG 0812"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1016.jpg" alt="Church photo - IMG 1016"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1527.jpg" alt="Church photo - IMG 1527"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1530.jpg" alt="Church photo - IMG 1530"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0570.jpg"
+                                alt="Church photo - IMG 0570"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0588.jpg"
+                                alt="Church photo - IMG 0588"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0812.jpg"
+                                alt="Church photo - IMG 0812"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1016.jpg"
+                                alt="Church photo - IMG 1016"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1527.jpg"
+                                alt="Church photo - IMG 1527"></a></div>
+                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1530.jpg"
+                                alt="Church photo - IMG 1530"></a></div>
                 </div>
             </noscript>
         </div>
@@ -253,8 +312,9 @@
         <div class="container">
             <div class="giving-content">
                 <h2>Give Generously</h2>
-                <p class="giving-intro">Your generosity supports the ministry of Christ Synagogue Ministries and helps us reach more people with the gospel. Below are our giving platforms.</p>
-                
+                <p class="giving-intro">Your generosity supports the ministry of Christ Synagogue Ministries and helps
+                    us reach more people with the gospel. Below are our giving platforms.</p>
+
                 <div class="giving-methods">
                     <div class="giving-method">
                         <h3>M-PESA Payment</h3>
@@ -280,15 +340,18 @@
                     <h3>Member Testimonies</h3>
                     <div class="testimonies-container">
                         <div class="testimony-card">
-                            <p class="testimony-text">"This ministry has transformed my spiritual journey. The loving community and powerful messages have brought me closer to God."</p>
+                            <p class="testimony-text">"This ministry has transformed my spiritual journey. The loving
+                                community and powerful messages have brought me closer to God."</p>
                             <p class="testimony-author">- Sarah M.</p>
                         </div>
                         <div class="testimony-card">
-                            <p class="testimony-text">"I found a ministry family that truly cares. The fellowship and support have been incredible during challenging times."</p>
+                            <p class="testimony-text">"I found a ministry family that truly cares. The fellowship and
+                                support have been incredible during challenging times."</p>
                             <p class="testimony-author">- James K.</p>
                         </div>
                         <div class="testimony-card">
-                            <p class="testimony-text">"The worship experience here is genuine and uplifting. Every Sunday I leave feeling renewed and encouraged in my faith."</p>
+                            <p class="testimony-text">"The worship experience here is genuine and uplifting. Every
+                                Sunday I leave feeling renewed and encouraged in my faith."</p>
                             <p class="testimony-author">- Mary P.</p>
                         </div>
                     </div>
@@ -365,10 +428,15 @@
                 <div class="footer-section">
                     <h4>Connect With Us</h4>
                     <div class="social-links">
-                        <a href="https://csm.church" target="_blank" rel="noopener" class="social-icon" title="Website"><i class="fas fa-globe"></i> Website</a>
-                        <a href="https://www.tiktok.com/@propheticpowertvp?_r=1&amp;_d=elklii46kl12lh&amp;sec_uid=MS4wLjABAAAAPXA_3YBCcqODM_5vZgGOyVfsT4x-Lbco02K8L2G3wup_ViniWWXqckBDvz9fNysK&amp;share_author_id=7191169461838349318&amp;sharer_language=en&amp;source=h5_m&amp;u_code=elkljk5dl359i7&amp;item_author_type=2&amp;utm_source=whatsapp&amp;tt_from=whatsapp&amp;enable_checksum=1&amp;utm_medium=ios&amp;share_link_id=07176332-2529-4CF9-AACF-68E1ED9AEB57&amp;user_id=7536678139281671224&amp;sec_user_id=MS4wLjABAAAAmSp8JGCgV8vzaGt2KhzJ9pAf1KONVKzIszt1dxMGcoR4HQiCdrdSwBRGnB-MgLNi&amp;social_share_type=5&amp;ug_btm=b5171,b5836&amp;utm_campaign=client_share&amp;share_app_id=1233" target="_blank" rel="noopener" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
-                        <a href="https://web.facebook.com/Prophetbaraka.ogillo" target="_blank" rel="noopener" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                        <a href="https://www.youtube.com/@ogillob" target="_blank" rel="noopener" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="https://csm.church" target="_blank" rel="noopener" class="social-icon"
+                            title="Website"><i class="fas fa-globe"></i> Website</a>
+                        <a href="https://www.tiktok.com/@propheticpowertvp?_r=1&amp;_d=elklii46kl12lh&amp;sec_uid=MS4wLjABAAAAPXA_3YBCcqODM_5vZgGOyVfsT4x-Lbco02K8L2G3wup_ViniWWXqckBDvz9fNysK&amp;share_author_id=7191169461838349318&amp;sharer_language=en&amp;source=h5_m&amp;u_code=elkljk5dl359i7&amp;item_author_type=2&amp;utm_source=whatsapp&amp;tt_from=whatsapp&amp;enable_checksum=1&amp;utm_medium=ios&amp;share_link_id=07176332-2529-4CF9-AACF-68E1ED9AEB57&amp;user_id=7536678139281671224&amp;sec_user_id=MS4wLjABAAAAmSp8JGCgV8vzaGt2KhzJ9pAf1KONVKzIszt1dxMGcoR4HQiCdrdSwBRGnB-MgLNi&amp;social_share_type=5&amp;ug_btm=b5171,b5836&amp;utm_campaign=client_share&amp;share_app_id=1233"
+                            target="_blank" rel="noopener" class="social-icon" title="TikTok"><i
+                                class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://web.facebook.com/Prophetbaraka.ogillo" target="_blank" rel="noopener"
+                            class="social-icon" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://www.youtube.com/@ogillob" target="_blank" rel="noopener" class="social-icon"
+                            title="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -381,7 +449,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Christ Synagogue Ministries. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2026 Christ Synagogue Ministries. All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                        href="#">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -389,4 +458,5 @@
     <script src="script.js"></script>
     <script src="lazyload.js"></script>
 </body>
+
 </html>
