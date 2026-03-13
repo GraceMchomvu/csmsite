@@ -241,7 +241,7 @@ body {
     background-position: center;
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    filter: brightness(0.6) contrast(1.1);
+    filter: brightness(0.9) contrast(1.05);
     transform: scale(1.05);
     animation: heroZoomSlow 24s linear infinite;
 }
@@ -269,9 +269,9 @@ body {
     inset: 0;
     z-index: 1;
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0, 0.85) 100%);
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.7) 100%);
 }
 
 /* ── Inner Content Layout ── */
@@ -1572,4 +1572,118 @@ img.lazy.loaded {
     .footer-section ul {
         margin-bottom: 10px;
     }
+
+}
+
+/* ══════════════════════════════════════════════════════════════
+   GLOBAL CREATIVE POLISH
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Scroll Reveal Animation ── */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Card Hover Effects ── */
+.event-card,
+.prophet-card,
+.feature-item,
+.giving-method,
+.testimony-card,
+.info-item {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.event-card:hover,
+.feature-item:hover,
+.giving-method:hover,
+.testimony-card:hover,
+.info-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.prophet-card:hover .prophet-image img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.prophet-image img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ── Gallery Image Effects ── */
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+}
+
+.gallery-item img {
+    transition: transform 0.6s ease;
+    width: 100%;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    /* Zoom effect on hover */
+}
+
+/* ── Creative Footer Background ── */
+.footer {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #1f1f3a, #1a1a2e);
+    background-size: 400% 400%;
+    animation: footerGradient 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes footerGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ── Section Header Creative Underline ── */
+h2 {
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #a78bfa);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+section:hover h2::after {
+    width: 100px;
+    /* Expands on section hover */
 }

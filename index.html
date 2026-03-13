@@ -23,14 +23,23 @@
                 <span>Christ Synagogue Ministries</span>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#events" class="nav-link">Events</a></li>
-                <li><a href="#prophet" class="nav-link">Prophet</a></li>
-                <li><a href="gallery.html" class="nav-link">Photos</a></li>
-                <li><a href="#giving" class="nav-link">Give</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#events" class="nav-link" data-i18n="nav.events">Events</a></li>
+                <li><a href="#prophet" class="nav-link" data-i18n="nav.prophet">Prophet</a></li>
+                <li><a href="gallery.html" class="nav-link" data-i18n="nav.photos">Photos</a></li>
+                <li><a href="#giving" class="nav-link" data-i18n="nav.give">Give</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-lang">
+                    <select id="language-selector" aria-label="Select Language">
+                        <option value="en">🇺🇸 EN</option>
+                        <option value="sw">🇹🇿 SW</option>
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="es">🇪🇸 ES</option>
+                        <option value="ar">🇸🇦 AR</option>
+                    </select>
+                </li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -93,14 +102,15 @@
         <div class="container">
             <div class="about-header">
                 <span class="about-label">Who We Are</span>
-                <h2>About Our Church</h2>
-                <p class="about-intro">Christ Synagogue Ministries is led by <strong>Prophet Baraka David
+                <h2 class="reveal-on-scroll">About Our Church</h2>
+                <p class="about-intro reveal-on-scroll">Christ Synagogue Ministries is led by <strong>Prophet Baraka
+                        David
                         Ogillo</strong> in Arusha, Tanzania. We are dedicated to transforming lives through guidance,
                     deliverance, and Spirit-filled worship—spreading the gospel and building a strong, loving community
                     of believers through faith, discipleship, and prophetic ministry.</p>
             </div>
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image reveal-on-scroll">
                     <div class="image-container">
                         <img src="churchphotos/PROPHET1.jpg"
                             alt="Prophet Baraka David Ogillo ministering at Christ Synagogue Ministries"
@@ -108,17 +118,17 @@
                     </div>
                 </div>
                 <div class="about-features">
-                    <div class="feature-item">
+                    <div class="feature-item reveal-on-scroll">
                         <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
                         <h3>Our Mission</h3>
                         <p>To glorify God and make disciples of all nations</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item reveal-on-scroll">
                         <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
                         <h3>Our Vision</h3>
                         <p>A thriving community transformed by God's love and truth</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item reveal-on-scroll">
                         <div class="feature-icon"><i class="fas fa-heart"></i></div>
                         <h3>Our Values</h3>
                         <p>Faith, Integrity, Community, and Excellence</p>
@@ -131,35 +141,35 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 class="reveal-on-scroll">Our Services</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Sunday Worship</h3>
                     <p>Experience uplifting worship and powerful teaching of God's Word.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-hands-praying"></i></div>
                     <h3>Prayer Meetings</h3>
                     <p>Midweek prayer services for intercession, praise, and spiritual growth.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-fire"></i></div>
                     <h3>Prophetic Ministry</h3>
                     <p>Experience the power of the Holy Spirit through prophetic words, divine guidance, and spiritual
                         impartation.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-users"></i></div>
                     <h3>Discipleship</h3>
                     <p>Small group studies designed to deepen your faith and spiritual maturity.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-music"></i></div>
                     <h3>Praise & Worship</h3>
                     <p>Contemporary and traditional worship leading people closer to God.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll">
                     <div class="service-icon"><i class="fas fa-handshake"></i></div>
                     <h3>Counseling</h3>
                     <p>Pastoral and spiritual counseling to help you navigate life's challenges.</p>
@@ -171,12 +181,23 @@
     <!-- Events Section -->
     <section id="events" class="events">
         <div class="container">
-            <h2>Service Times</h2>
-            <p class="events-intro">Join us at our church in Arusha, Tanzania.</p>
+            <h2 class="reveal-on-scroll">Service Times</h2>
+            <p class="events-intro reveal-on-scroll">Join us at our church in Arusha, Tanzania.</p>
             <div class="events-list">
-                <div class="event-card">
+                <div class="event-card reveal-on-scroll">
                     <div class="event-date">
-                        <span class="date-day">Sun</span>
+                        <span class="date-day">Mar 14</span>
+                        <span class="date-month">2:00 PM</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Saturday Service</h3>
+                        <p class="event-location"><i class="fas fa-location-dot"></i> Arusha, Tanzania</p>
+                        <p>Fellowship, worship, and spiritual growth.</p>
+                    </div>
+                </div>
+                <div class="event-card reveal-on-scroll">
+                    <div class="event-date">
+                        <span class="date-day">Mar 15</span>
                         <span class="date-month">10:00 AM</span>
                     </div>
                     <div class="event-details">
@@ -185,9 +206,9 @@
                         <p>Worship, prophetic ministry, and teaching of God's Word.</p>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card reveal-on-scroll">
                     <div class="event-date">
-                        <span class="date-day">Tue</span>
+                        <span class="date-day">Mar 17</span>
                         <span class="date-month">6:00 PM</span>
                     </div>
                     <div class="event-details">
@@ -196,26 +217,15 @@
                         <p>Midweek prayer and fellowship.</p>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card reveal-on-scroll">
                     <div class="event-date">
-                        <span class="date-day">Thu</span>
+                        <span class="date-day">Mar 19</span>
                         <span class="date-month">6:00 PM</span>
                     </div>
                     <div class="event-details">
                         <h3>Thursday Service</h3>
                         <p class="event-location"><i class="fas fa-location-dot"></i> Arusha, Tanzania</p>
                         <p>Worship and ministry.</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="date-day">Sat</span>
-                        <span class="date-month">2:00 PM</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Saturday Service</h3>
-                        <p class="event-location"><i class="fas fa-location-dot"></i> Arusha, Tanzania</p>
-                        <p>Fellowship, worship, and spiritual growth.</p>
                     </div>
                 </div>
             </div>
@@ -225,18 +235,19 @@
     <!-- Prophet Section -->
     <section id="prophet" class="prophet-section">
         <div class="container">
-            <h2>Our Prophet</h2>
-            <p class="prophet-intro">Prophet Baraka David Ogillo leads Christ Synagogue Ministries with prophetic
+            <h2 class="reveal-on-scroll">Our Prophet</h2>
+            <p class="prophet-intro reveal-on-scroll">Prophet Baraka David Ogillo leads Christ Synagogue Ministries with
+                prophetic
                 insight, deliverance, and Spirit-filled worship in Arusha, Tanzania.</p>
             <div class="prophet-grid">
-                <div class="prophet-card">
+                <div class="prophet-card reveal-on-scroll">
                     <div class="prophet-image">
                         <img class="lazy" data-src="churchphotos/PROPHET1.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Prophet Photo 1" loading="lazy" decoding="async">
                     </div>
                 </div>
-                <div class="prophet-card">
+                <div class="prophet-card reveal-on-scroll">
                     <div class="prophet-image">
                         <img class="lazy" data-src="churchphotos/PROPHET2.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
@@ -246,12 +257,12 @@
             </div>
             <noscript>
                 <div class="prophet-grid">
-                    <div class="prophet-card">
+                    <div class="prophet-card reveal-on-scroll">
                         <div class="prophet-image">
                             <img src="churchphotos/PROPHET1.jpg" alt="Prophet Photo 1">
                         </div>
                     </div>
-                    <div class="prophet-card">
+                    <div class="prophet-card reveal-on-scroll">
                         <div class="prophet-image">
                             <img src="churchphotos/PROPHET2.jpg" alt="Prophet Photo 2">
                         </div>
@@ -264,24 +275,30 @@
     <!-- Photos Preview Section -->
     <section id="photos" class="gallery">
         <div class="container">
-            <h2>Church Photos</h2>
+            <h2 class="reveal-on-scroll">Church Photos</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0570.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_0570.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 0570" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0588.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_0588.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 0588" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_0812.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_0812.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 0812" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1016.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_1016.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 1016" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1527.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_1527.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 1527" loading="lazy" decoding="async" fetchpriority="low"></a></div>
-                <div class="gallery-item"><a href="gallery.html"><img class="lazy" data-src="churchphotos/IMG_1530.jpg"
+                <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img class="lazy"
+                            data-src="churchphotos/IMG_1530.jpg"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                             alt="Church photo - IMG 1530" loading="lazy" decoding="async" fetchpriority="low"></a></div>
             </div>
@@ -290,18 +307,18 @@
             </div>
             <noscript>
                 <div class="gallery-grid" style="margin-top: 28px;">
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0570.jpg"
-                                alt="Church photo - IMG 0570"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0588.jpg"
-                                alt="Church photo - IMG 0588"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_0812.jpg"
-                                alt="Church photo - IMG 0812"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1016.jpg"
-                                alt="Church photo - IMG 1016"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1527.jpg"
-                                alt="Church photo - IMG 1527"></a></div>
-                    <div class="gallery-item"><a href="gallery.html"><img src="churchphotos/IMG_1530.jpg"
-                                alt="Church photo - IMG 1530"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_0570.jpg" alt="Church photo - IMG 0570"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_0588.jpg" alt="Church photo - IMG 0588"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_0812.jpg" alt="Church photo - IMG 0812"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_1016.jpg" alt="Church photo - IMG 1016"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_1527.jpg" alt="Church photo - IMG 1527"></a></div>
+                    <div class="gallery-item reveal-on-scroll"><a href="gallery.html"><img
+                                src="churchphotos/IMG_1530.jpg" alt="Church photo - IMG 1530"></a></div>
                 </div>
             </noscript>
         </div>
@@ -311,12 +328,13 @@
     <section id="giving" class="giving">
         <div class="container">
             <div class="giving-content">
-                <h2>Give Generously</h2>
-                <p class="giving-intro">Your generosity supports the ministry of Christ Synagogue Ministries and helps
+                <h2 class="reveal-on-scroll">Give Generously</h2>
+                <p class="giving-intro reveal-on-scroll">Your generosity supports the ministry of Christ Synagogue
+                    Ministries and helps
                     us reach more people with the gospel. Below are our giving platforms.</p>
 
                 <div class="giving-methods">
-                    <div class="giving-method">
+                    <div class="giving-method reveal-on-scroll">
                         <h3>M-PESA Payment</h3>
                         <p>Send your support via M-Pesa</p>
                         <div class="giving-detail">
@@ -324,7 +342,7 @@
                             <p class="giving-info">+255769075062</p>
                         </div>
                     </div>
-                    <div class="giving-method">
+                    <div class="giving-method reveal-on-scroll">
                         <h3>CRDB Bank Transfer</h3>
                         <p>Bank transfer to our ministry account</p>
                         <div class="giving-detail">
@@ -339,17 +357,17 @@
                 <div class="testimonies-section">
                     <h3>Member Testimonies</h3>
                     <div class="testimonies-container">
-                        <div class="testimony-card">
+                        <div class="testimony-card reveal-on-scroll">
                             <p class="testimony-text">"This ministry has transformed my spiritual journey. The loving
                                 community and powerful messages have brought me closer to God."</p>
                             <p class="testimony-author">- Sarah M.</p>
                         </div>
-                        <div class="testimony-card">
+                        <div class="testimony-card reveal-on-scroll">
                             <p class="testimony-text">"I found a ministry family that truly cares. The fellowship and
                                 support have been incredible during challenging times."</p>
                             <p class="testimony-author">- James K.</p>
                         </div>
-                        <div class="testimony-card">
+                        <div class="testimony-card reveal-on-scroll">
                             <p class="testimony-text">"The worship experience here is genuine and uplifting. Every
                                 Sunday I leave feeling renewed and encouraged in my faith."</p>
                             <p class="testimony-author">- Mary P.</p>
@@ -363,9 +381,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 class="reveal-on-scroll">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-form">
+                <div class="contact-form reveal-on-scroll">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" placeholder="Your Name" required>
@@ -383,21 +401,21 @@
                     </form>
                 </div>
                 <div class="contact-info">
-                    <div class="info-item">
+                    <div class="info-item reveal-on-scroll">
                         <h3><i class="fas fa-location-dot"></i> Location</h3>
                         <p>Christ Synagogue Ministries<br>Arusha, Tanzania</p>
                     </div>
-                    <div class="info-item">
+                    <div class="info-item reveal-on-scroll">
                         <h3><i class="fas fa-phone"></i> Phone / M-Pesa</h3>
                         <p><a href="tel:+255769075062">+255 769 075 062</a></p>
                     </div>
-                    <div class="info-item">
+                    <div class="info-item reveal-on-scroll">
                         <h3><i class="fas fa-globe"></i> Website</h3>
                         <p><a href="https://csm.church" target="_blank" rel="noopener">csm.church</a></p>
                     </div>
-                    <div class="info-item">
+                    <div class="info-item reveal-on-scroll">
                         <h3><i class="fas fa-clock"></i> Service Times</h3>
-                        <p>Sunday 10:00 AM · Tuesday 6:00 PM<br>Thursday 6:00 PM · Saturday 2:00 PM</p>
+                        <p>Saturday 2:00 PM · Sunday 10:00 AM<br>Tuesday 6:00 PM · Thursday 6:00 PM</p>
                     </div>
                 </div>
             </div>
