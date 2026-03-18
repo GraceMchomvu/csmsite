@@ -234,18 +234,53 @@ window.addEventListener('beforeprint', () => {
     }, 2500); // Change every 2.5 seconds
 })();
 
-// ===== Hero Background Slideshow =====
-(function () {
-    const slides = document.querySelectorAll('.hero-slide');
-    if (slides.length === 0) return;
+// Hero Background Slideshow Removed to support YouTube Background Video
 
-    let current = 0;
-    const intervalTime = 6000; // 6 seconds per slide
+// ===== Language Translation =====
+const languageSelector = document.getElementById('language-selector');
 
-    setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-    }, intervalTime);
-})();
+function setLanguage(lang) {
+    if (!window.csmTranslations || !window.csmTranslations[lang]) return;
+    const t = window.csmTranslations[lang];
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = t[key];
+            } else {
+                el.innerHTML = t[key];
+            }
+        }
+    });
+
+    // Handle HTML dir for Arabic
+    if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+        document.documentElement.lang = 'ar';
+    } else {
+        document.documentElement.dir = 'ltr';
+        document.documentElement.lang = lang;
+    }
+    
+    if (languageSelector) {
+        languageSelector.value = lang;
+    }
+    
+    localStorage.setItem('csmLanguage', lang);
+}
+
+if (languageSelector) {
+    languageSelector.addEventListener('change', (e) => {
+        setLanguage(e.target.value);
+    });
+}
+
+// Initialize after translating if any translations exist
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('csmLanguage') || 'en';
+    if(window.csmTranslations) {
+        setLanguage(savedLang);
+    }
+});
 
