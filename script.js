@@ -268,6 +268,10 @@ function setLanguage(lang) {
     }
     
     localStorage.setItem('csmLanguage', lang);
+
+    if (typeof updateServiceDates === 'function') {
+        updateServiceDates(lang);
+    }
 }
 
 if (languageSelector) {
@@ -281,6 +285,42 @@ window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('csmLanguage') || 'en';
     if(window.csmTranslations) {
         setLanguage(savedLang);
+    } else {
+        if (typeof updateServiceDates === 'function') {
+            updateServiceDates(savedLang);
+        }
     }
 });
+
+// ===== Dynamic Service Dates =====
+function getNextDayOfWeek(dayOfWeek, lang = 'en') {
+    const today = new Date();
+    const resultDate = new Date(today);
+    
+    let distance = (dayOfWeek + 7 - today.getDay()) % 7;
+    resultDate.setDate(today.getDate() + distance);
+    
+    let locale = 'en-US';
+    if (lang === 'sw') locale = 'sw-TZ';
+    else if (lang === 'fr') locale = 'fr-FR';
+    else if (lang === 'es') locale = 'es-ES';
+    else if (lang === 'ar') locale = 'ar-SA';
+    
+    const options = { month: 'short', day: 'numeric' };
+    return resultDate.toLocaleDateString(locale, options);
+}
+
+function updateServiceDates(lang = 'en') {
+    const satEl = document.getElementById('date-sat');
+    if (satEl) satEl.textContent = getNextDayOfWeek(6, lang);
+    
+    const sunEl = document.getElementById('date-sun');
+    if (sunEl) sunEl.textContent = getNextDayOfWeek(0, lang);
+    
+    const tueEl = document.getElementById('date-tue');
+    if (tueEl) tueEl.textContent = getNextDayOfWeek(2, lang);
+    
+    const thuEl = document.getElementById('date-thu');
+    if (thuEl) thuEl.textContent = getNextDayOfWeek(4, lang);
+}
 
