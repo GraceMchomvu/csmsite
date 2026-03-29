@@ -53,14 +53,13 @@
     <!-- Hero Section — Seven Hills Style -->
     <section id="home" class="hero">
 
-        <!-- Video Background -->
-        <div class="hero-video" aria-hidden="true">
-            <iframe 
-                src="https://www.youtube.com/embed/x6ap1tapbx8?autoplay=1&mute=1&loop=1&playlist=x6ap1tapbx8&start=5287&controls=0&disablekb=1&fs=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
-            </iframe>
+        <!-- Photo Slideshow Background -->
+        <div class="hero-slideshow" aria-hidden="true">
+            <div class="slide active" style="background-image: url('churchphotos/IMG_0570.jpg')"></div>
+            <div class="slide" style="background-image: url('churchphotos/IMG_0812.jpg')"></div>
+            <div class="slide" style="background-image: url('churchphotos/IMG_1016.jpg')"></div>
+            <div class="slide" style="background-image: url('churchphotos/IMG_1527.jpg')"></div>
+            <div class="slide" style="background-image: url('churchphotos/IMG_1530.jpg')"></div>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -93,10 +92,11 @@
             </div>
         </div>
 
-        <!-- Scroll cue -->
-        <a href="#about" class="hero-scroll" aria-label="Scroll down">
-            <span class="hero-scroll-mouse"><span class="hero-scroll-wheel"></span></span>
-        </a>
+        <!-- Easter Countdown Widget -->
+        <div class="easter-countdown-widget">
+            <div class="rotating-cross" aria-hidden="true"><i class="fas fa-cross"></i></div>
+            <div class="countdown-text" id="easterCountdown">Loading...</div>
+        </div>
     </section>
 
     <!-- Latest Sermons Section -->

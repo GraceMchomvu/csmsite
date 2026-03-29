@@ -227,25 +227,26 @@ body {
     background-color: #050505;
 }
 
-/* ── Video Background ── */
-.hero-video {
+/* ── Slideshow Background ── */
+.hero-slideshow {
     position: absolute;
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    background-color: #000;
+    background-color: #050505; /* Dark background so low opacity stands out */
 }
 
-.hero-video iframe {
+.hero-slideshow .slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 56.25vw; /* 16:9 Aspect Ratio */
-    min-height: 100vh;
-    min-width: 177.77vh; /* 16:9 Aspect Ratio */
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-slideshow .slide.active {
+    opacity: 0.40; /* Increased opacity for better visibility */
 }
 
 .hero-overlay {
@@ -486,6 +487,60 @@ body {
     to {
         opacity: 1;
     }
+}
+
+/* ── Easter Countdown Widget ── */
+.easter-countdown-widget {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(10, 10, 15, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeIn 1s ease 1.2s forwards;
+}
+
+.rotating-cross {
+    font-size: 1.8rem;
+    color: #a78bfa;
+    animation: rotateSlowly 10s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotateSlowly {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.countdown-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fca5a5; /* Soft pastel red/pink */
+}
+
+.countdown-text.risen {
+    color: #fbbf24; /* Godlen yellow */
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { opacity: 0.8; text-shadow: 0 0 5px rgba(251, 191, 36, 0.3); }
+    to { opacity: 1; text-shadow: 0 0 15px rgba(251, 191, 36, 0.8); }
 }
 
 /* ══════════════════════════════════════════════════════════════

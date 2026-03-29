@@ -234,7 +234,18 @@ window.addEventListener('beforeprint', () => {
     }, 2500); // Change every 2.5 seconds
 })();
 
-// Hero Background Slideshow Removed to support YouTube Background Video
+// ===== Hero Background Slideshow =====
+(function() {
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000); // Change image every 5 seconds
+    }
+})();
 
 // ===== Language Translation =====
 const languageSelector = document.getElementById('language-selector');
@@ -322,5 +333,48 @@ function updateServiceDates(lang = 'en') {
     
     const thuEl = document.getElementById('date-thu');
     if (thuEl) thuEl.textContent = getNextDayOfWeek(4, lang);
+}
+
+// ===== Easter Countdown =====
+function initEasterCountdown() {
+    const countdownEl = document.getElementById('easterCountdown');
+    if (!countdownEl) return;
+
+    // Easter target: April 5, 2026, 00:00:00 local time
+    const easterDate = new Date('April 5, 2026 00:00:00').getTime();
+
+    function update() {
+        const now = new Date().getTime();
+        const distance = easterDate - now;
+
+        if (distance < 0) {
+            countdownEl.innerHTML = "He Is Risen!";
+            countdownEl.classList.add('risen');
+            
+            const cross = document.querySelector('.rotating-cross');
+            if(cross) {
+                cross.style.color = "#fbbf24"; // Turn golden too
+                cross.style.animation = "pulseGlow 2s infinite alternate"; 
+            }
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownEl.innerHTML = `Easter: ${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    update();
+    setInterval(update, 1000);
+}
+
+// Initialize when ready
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEasterCountdown);
+} else {
+    initEasterCountdown();
 }
 
